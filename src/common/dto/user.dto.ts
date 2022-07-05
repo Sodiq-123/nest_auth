@@ -5,38 +5,47 @@ import {
   MinLength,
   MaxLength,
 } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class RegisterDTO {
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'first name is required' })
+  @ApiProperty()
   first_name: string;
 
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'last name is required' })
+  @ApiProperty()
   last_name: string;
 
   @IsEmail()
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'email is required' })
+  @ApiProperty()
   email: string;
 
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'username is required' })
+  @ApiProperty()
   username: string;
 
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'phone number is required' })
   @Length(11)
+  @ApiProperty()
   phone_number: string;
 
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'password is required' })
   @MinLength(8)
   @MaxLength(20)
+  @ApiProperty()
   password: string;
 }
 
 export class LoginDTO {
   @IsEmail()
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'email is required' })
+  @ApiProperty()
   email: string;
 
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'password is required' })
   @MinLength(8)
   @MaxLength(20)
+  @ApiProperty()
   password: string;
 }
