@@ -10,7 +10,7 @@ import {
 import { AppLogger } from '../../common/logger/logger';
 import { LoginDTO, RegisterDTO } from '../../common/dto/user.dto';
 import { UsersService } from './users.service';
-import { HttpResponse } from '../../common/helpers/utilities/response.utilites';
+import { HttpResponse } from '../../common/utilities/response.utilites';
 import { GetUser } from '../../common/decorators/get-user.decorator';
 import { AuthGuard } from '../../common/guards/auth.guard';
 

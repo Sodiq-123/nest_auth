@@ -3,7 +3,7 @@ import {
   REDIS_HOST,
   REDIS_PASSWORD,
   REDIS_PORT,
-} from '../../../config/env.config';
+} from '../../config/env.config';
 
 const client = redis.createClient(Number(REDIS_PORT), REDIS_HOST, {
   ...(REDIS_PASSWORD && { password: REDIS_PASSWORD }),

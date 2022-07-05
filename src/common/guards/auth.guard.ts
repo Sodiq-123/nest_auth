@@ -5,7 +5,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { UsersService } from '../../modules/users/users.service';
-import { RedisCache } from '../helpers/utilities/redis.utilities';
+import { RedisCache } from '../utilities/redis.utilities';
 import { Repository } from 'typeorm';
 import { User } from '../../models/user.entity';
 import { InjectRepository } from '@nestjs/typeorm';

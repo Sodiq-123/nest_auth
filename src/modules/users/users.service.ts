@@ -7,7 +7,7 @@ import * as ENV from '../../config/env.config';
 import { IServiceResponse } from '../../common/interfaces/service.interface';
 import * as bcrypt from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
-import { RedisCache } from '../../common/helpers/utilities/redis.utilities';
+import { RedisCache } from '../../common/utilities/redis.utilities';
 
 @Injectable()
 export class UsersService {
